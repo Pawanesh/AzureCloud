@@ -1,0 +1,1 @@
+https://learn.microsoft.com/en-us/azure/azure-functions/durable/quickstart-python-vscode?tabs=macos%2Cazure-cli-set-indexing-flag&pivots=python-mode-configuration
