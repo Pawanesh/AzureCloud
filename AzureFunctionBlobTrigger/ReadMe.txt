@@ -1,0 +1,1 @@
+DefaultEndpointsProtocol=https;AccountName=blobtriggerstorageacc;AccountKey=wZBsHXMRHiTlv1E2cAWbGtmc2PvWW0cazrakv8OZtiEZGHMN5sMxGrsw2hMJYXM92GjA0ZcgRvL/+AStflQqsA==;EndpointSuffix=core.windows.net

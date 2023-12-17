@@ -7,7 +7,7 @@ try:
 
     # Quickstart code goes here
 
-    account_url = "https://pyblobstorageacc.blob.core.windows.net"
+    account_url = "https://storageaccpg230.blob.core.windows.net"
     default_credential = DefaultAzureCredential()
 
     # Create the BlobServiceClient object

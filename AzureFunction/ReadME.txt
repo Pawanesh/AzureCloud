@@ -26,6 +26,7 @@ cat requirements.txt
 
     azure-functions
 
+
 cat function_app.py
     import azure.functions as func
 
@@ -103,4 +104,6 @@ az functionapp config appsettings set --name PyFunctionApp101  --resource-group 
 
 
 func azure functionapp logstream PyFunctionApp101 --browser
+
+
 

@@ -1,6 +1,11 @@
 #Connect linux vm
 ssh -i sshkeys/test-vm-2_key.pem azureuser@40.71.26.76 
 
+ssh -i sshkeys/vm-test-key.pem azureuser@104.45.148.195
+
+
+#Connect linux vm via cloud shell
+az ssh vm --resource-group vm-rg --vm-name vm-test --subscription 17e6b87f-6549-4a64-91e0-dbda9e0d5be2
 
 #Install homebrew
 /bin/bash -c "$(curl --insecure -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -29,3 +34,19 @@ The following tenants don't contain accessible subscriptions. Use 'az login --al
     }
   }
 ]
+
+
+
+
+https://durablefuncpg230.azurewebsites.net/api/orchestrators/Orch1?code=rwgqzodiambSjytre4SHeRML3jmDSLqEvA9cxUJ1WCoAAzFu7kUaWA==
+
+
+https://durablefuncpg230.azurewebsites.net/api/orchestrators/{functionName}?code=rwgqzodiambSjytre4SHeRML3jmDSLqEvA9cxUJ1WCoAAzFu7kUaWA==
+
+
+
+
+
+https://storageaccpg230.blob.core.windows.net/?sv=2022-11-02&ss=b&srt=c&sp=rtf&se=2023-10-25T21:21:36Z&st=2023-10-25T13:21:36Z&spr=https&sig=NF%2B0zNIG0aTm2T9RJMtTuoR04yTkpdDhc3aYqvuZQuQ%3D
+
+https://storageaccpg230.blob.core.windows.net/container1?sp=rl&st=2023-10-25T13:30:33Z&se=2023-10-25T21:30:33Z&spr=https&sv=2022-11-02&sr=c&sig=d1mPuUMWTuoDEzx1OiXNnaWOBvuJcrzIgkqRm6zlaUU%3D

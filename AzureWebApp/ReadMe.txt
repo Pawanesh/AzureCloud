@@ -200,4 +200,25 @@
 
 #Cleanup
     az group delete --name webapp-rg
-    Are you sure you want to perform this operation? (y/n): y
+    Are you sure you want to perform this opera
+    
+
+az webapp log config \
+    --web-server-logging filesystem \
+    --name test-webapp-pg230 \
+    --resource-group test-webapp-rg
+
+az webapp log tail \
+    --name test-webapp-pg230 \
+    --resource-group test-webapp-rg
+
+
+
+az webapp log download --resource-group test-webapp-rg  --name test-webapp-pg230 --log-file ftp://waws-prod-blu-353.ftp.azurewebsites.windows.net/site/wwwroot
+
+
+#Web app deploy using cli
+    az group create --name webapp-cli-rg --location eastus
+    az appservice plan create --name webappcliplan-1 -g webapp-cli-rg --location eastus --sku B1 --is-linux
+    az webapp create -g webapp-cli-rg -p webappcliplan-1 -n webappclipg230 --runtime "PYTHON:3.11" 
+    az webapp deploy -g webapp-cli-rg --name webappclipg230 --src-path /Users/pawgupta0/Pawanesh/development/AzureCloud/AzureWebAppCLI/Archive.zip --type zip              

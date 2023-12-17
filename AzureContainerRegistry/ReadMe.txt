@@ -272,3 +272,56 @@ az container create --resource-group acr-rg --name helloworldcontainer --image p
             Name                 ResourceGroup    Status    Image                                                      CPU/Memory       OsType    Location
             -------------------  ---------------  --------  ---------------------------------------------------------  ---------------  --------  ----------
             helloworldcontainer  acr-rg           Running   pawaneshcontainerregistry.azurecr.io/sample/helloworld:v1  1.0 core/1.5 gb  Linux     eastus
+
+
+############# Azure web app container ########
+pwd: /Users/pawgupta0/Pawanesh/development/AzureCloud/AzureContainerRegistry/WebApp
+#Build image
+    docker build  . -t webappimage:v1 -f ./DockerFile
+
+#Run image
+    docker run --rm -it -p 4000:80  --name webapp-container webappimage:v1
+
+#Debug comtainer
+    docker run --rm --entrypoint /bin/bash -it -p 3000:3000  --name webapp-container webappimage:v1
+
+
+#Create resource group
+    az group create --name acr-rg --location eastus
+
+
+#Create acr 
+    az acr create --name acrpg230 -g acr-rg --sku Standard  
+
+
+#Enabled admin access to acr
+
+#Login into acr using docker
+    docker login acrpg230.azurecr.io 
+
+
+#Docker push to push image into acr
+    docker tag webappimage:v1 acrpg230.azurecr.io/webappimage:v1
+    docker push acrpg230.azurecr.io/webappimage:v1
+
+#Create web app using image from acr and test
+    https://pg230app.azurewebsites.net/
+
+
+#Display acr
+    az acr  show --name acrpg230 -o table
+    NAME      RESOURCE GROUP    LOCATION    SKU       LOGIN SERVER         CREATION DATE         ADMIN ENABLED
+    --------  ----------------  ----------  --------  -------------------  --------------------  ---------------
+    acrpg230  acr-rg            eastus      Standard  acrpg230.azurecr.io  2023-10-10T13:26:34Z  True
+
+
+#Display repositries in acr
+    az acr repository list --name acrpg230 -o table
+    Result
+    --------------
+    sample/webpapp
+    webappimage
+
+
+#Create a container in a container group using container image from Azure Container Registry.
+        az container create -g acr-rg --name containerwebapp --image acrpg230.azurecr.io/webappimage:v1 --registry-password 70iq87Usb91wCoF8Fi9GtsoWX9tMJsCQipGlzRdc9b+ACRBYchUO --ports 80 443

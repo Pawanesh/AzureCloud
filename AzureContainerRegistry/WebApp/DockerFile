@@ -1,0 +1,19 @@
+FROM mcr.microsoft.com/quantum/linux-selfcontained:latest
+
+WORKDIR /webapp
+
+RUN apt-get update 
+RUN apt-get -y install python3.9
+RUN apt-get -y install pip
+
+RUN python3.9 -m pip install Flask==2.0.2
+
+RUN python3.9 -m pip install gunicorn
+
+RUN python3.9 -m pip install werkzeug==2.2.2
+
+COPY . ./
+
+EXPOSE 80
+
+CMD ["flask", "run", "-h", "0.0.0.0", "-p", "80"]
