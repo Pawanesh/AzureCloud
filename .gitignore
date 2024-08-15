@@ -1,0 +1,8 @@
+.terraform
+*pyc*
+.terraform.*
+terraform.tfstate
+main.tfplan
+terraform.tfstate.backup
+.terraform.lock.hcl
+Azure_Terraform/*

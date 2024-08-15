@@ -50,3 +50,7 @@ https://durablefuncpg230.azurewebsites.net/api/orchestrators/{functionName}?code
 https://storageaccpg230.blob.core.windows.net/?sv=2022-11-02&ss=b&srt=c&sp=rtf&se=2023-10-25T21:21:36Z&st=2023-10-25T13:21:36Z&spr=https&sig=NF%2B0zNIG0aTm2T9RJMtTuoR04yTkpdDhc3aYqvuZQuQ%3D
 
 https://storageaccpg230.blob.core.windows.net/container1?sp=rl&st=2023-10-25T13:30:33Z&se=2023-10-25T21:30:33Z&spr=https&sv=2022-11-02&sr=c&sig=d1mPuUMWTuoDEzx1OiXNnaWOBvuJcrzIgkqRm6zlaUU%3D
+
+AccountEndpoint=https://cosmos-pg230.documents.azure.com:443/;AccountKey=gS9CG3MzniT4wiOElq4FHuZdIBPlZJ6hkuS5BRmkng5pmh1uW62h91ptwSPxmrwL9I7GvuALI90LACDbLAs9zw==;
+
+AccountEndpoint=https://cosmos-pg230.documents.azure.com:443/;AccountKey=gS9CG3MzniT4wiOElq4FHuZdIBPlZJ6hkuS5BRmkng5pmh1uW62h91ptwSPxmrwL9I7GvuALI90LACDbLAs9zw==;

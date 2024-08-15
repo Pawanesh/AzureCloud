@@ -222,3 +222,4 @@ az webapp log download --resource-group test-webapp-rg  --name test-webapp-pg230
     az appservice plan create --name webappcliplan-1 -g webapp-cli-rg --location eastus --sku B1 --is-linux
     az webapp create -g webapp-cli-rg -p webappcliplan-1 -n webappclipg230 --runtime "PYTHON:3.11" 
     az webapp deploy -g webapp-cli-rg --name webappclipg230 --src-path /Users/pawgupta0/Pawanesh/development/AzureCloud/AzureWebAppCLI/Archive.zip --type zip              
+ch

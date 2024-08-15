@@ -325,3 +325,5 @@ pwd: /Users/pawgupta0/Pawanesh/development/AzureCloud/AzureContainerRegistry/Web
 
 #Create a container in a container group using container image from Azure Container Registry.
         az container create -g acr-rg --name containerwebapp --image acrpg230.azurecr.io/webappimage:v1 --registry-password 70iq87Usb91wCoF8Fi9GtsoWX9tMJsCQipGlzRdc9b+ACRBYchUO --ports 80 443
+
+
